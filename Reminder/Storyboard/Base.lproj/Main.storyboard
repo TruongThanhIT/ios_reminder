@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fwy-5E-tKA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reminder List View Controller-->
+        <scene sceneID="Mak-N4-sEy">
+            <objects>
+                <tableViewController id="Fwy-5E-tKA" customClass="ReminderListViewController" customModule="Reminder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="S6s-8l-G0W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderListCell" rowHeight="808" id="Gwg-SN-M1K" customClass="ReminderListCell" customModule="Reminder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gwg-SN-M1K" id="Vwf-zc-XBe">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="eRl-xr-mQD">
+                                            <rect key="frame" x="16" y="382" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="WWe-qQ-58D"/>
+                                                <constraint firstAttribute="height" constant="44" id="wP8-XO-0RT"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" cornerStyle="dynamic">
+                                                <backgroundConfiguration key="background"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="doneButtonTriggered:" destination="Gwg-SN-M1K" eventType="touchUpInside" id="eWw-1l-P3R"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrk-Fi-IjU">
+                                            <rect key="frame" x="70" y="413" width="344" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSP-ja-f9o">
+                                            <rect key="frame" x="70" y="382" width="344" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eRl-xr-mQD" firstAttribute="leading" secondItem="Vwf-zc-XBe" secondAttribute="leading" constant="16" id="1Y9-ba-veC"/>
+                                        <constraint firstAttribute="trailing" secondItem="iSP-ja-f9o" secondAttribute="trailing" id="2Pi-GH-Dfs"/>
+                                        <constraint firstItem="iSP-ja-f9o" firstAttribute="leading" secondItem="eRl-xr-mQD" secondAttribute="trailing" constant="10" id="6wu-hM-Afq"/>
+                                        <constraint firstItem="iSP-ja-f9o" firstAttribute="top" secondItem="eRl-xr-mQD" secondAttribute="top" id="Cgp-d3-B7R"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rrk-Fi-IjU" secondAttribute="bottom" constant="10" id="Gln-Pk-tHA"/>
+                                        <constraint firstItem="Rrk-Fi-IjU" firstAttribute="leading" secondItem="iSP-ja-f9o" secondAttribute="leading" id="fxy-Sr-Zid"/>
+                                        <constraint firstItem="eRl-xr-mQD" firstAttribute="centerY" secondItem="Vwf-zc-XBe" secondAttribute="centerY" id="gcI-Io-QDK"/>
+                                        <constraint firstItem="Rrk-Fi-IjU" firstAttribute="top" secondItem="iSP-ja-f9o" secondAttribute="bottom" constant="10" id="pUH-o4-4fU"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rrk-Fi-IjU" secondAttribute="trailing" id="vbi-Qi-dLk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="Rrk-Fi-IjU" id="JiO-EJ-d6A"/>
+                                    <outlet property="doneButton" destination="eRl-xr-mQD" id="V6D-lr-edz"/>
+                                    <outlet property="titleLabel" destination="iSP-ja-f9o" id="ih7-Gk-RKC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fwy-5E-tKA" id="r6W-jv-cMJ"/>
+                            <outlet property="delegate" destination="Fwy-5E-tKA" id="5Vw-uZ-EEs"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mD1-0o-5Ra" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215.94202898550725" y="-155.35714285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
